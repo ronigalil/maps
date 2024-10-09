@@ -6,3 +6,4 @@ def add_house(address, space_available, text):
     houses_list.append(house)
 
 print("hello")
+print("hi")
