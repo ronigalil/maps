@@ -8,6 +8,8 @@ houses_list = []
 def add_house(address, space_available, text):
     house = {'address': address, 'space_available': space_available, 'text': text}
     houses_list.append(house)
+
+
 def city_soldier(soldier_requirements, houses_list):
     for house in range(0, len(houses_list)):
         houses_available = []
@@ -15,6 +17,12 @@ def city_soldier(soldier_requirements, houses_list):
             if space_available(houses_list[house], soldier_requirements):
                 houses_available.append(houses_list[house])
 
+
+def remove_full_house():
+    houses_list_copy = houses_list.copy()
+    for house in houses_list_copy:
+        if house["space_available"] == 0:
+            houses_list.remove(house)
 
 def space_available(house, soldier_requirements):
     if house['space'] >= soldier_requirements['space']:
