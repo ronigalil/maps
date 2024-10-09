@@ -1,3 +1,7 @@
+import pygame
+
+import Screen
+
 houses_list = []
 
 
@@ -15,6 +19,9 @@ def city_soldier(soldier_requirements, houses_list):
 def space_available(house, soldier_requirements):
     if house['space'] >= soldier_requirements['space']:
         return house
+
+pygame.init()
+Screen.initialize_screen()
 
 
 print("hello")
