@@ -7,3 +7,4 @@ def add_house(address, space_available, text):
 
 print("hello")
 print("hi")
+print("shalom")
